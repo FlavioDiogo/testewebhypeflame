@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-10-22T21:59:14.009Z",
+    "end": "2021-10-22T21:59:17.617Z",
+    "duration": 3608,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9bb82bf4-59a7-4472-88dc-75be305ad20b",
+      "title": "",
+      "fullFile": "cypress/tests/testehype.spec.js",
+      "file": "cypress/tests/testehype.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cf8b7651-5ad7-4575-b333-50d99c1ed02a",
+          "title": "Realizar pesquisa de artigos",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Dado que esteja na home do blog",
+              "fullTitle": "Realizar pesquisa de artigos Dado que esteja na home do blog",
+              "timedOut": null,
+              "duration": 2221,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.url().should('contains', 'hypeflame.blog');",
+              "err": {},
+              "uuid": "f855bbd6-0a40-4be9-b731-ce320a62ab55",
+              "parentUUID": "cf8b7651-5ad7-4575-b333-50d99c1ed02a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Quando ir na busca e pesquisar pelo artigo",
+              "fullTitle": "Realizar pesquisa de artigos Quando ir na busca e pesquisar pelo artigo",
+              "timedOut": null,
+              "duration": 1272,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#header-search').click();\ncy.get('[type=search]').type('agilidade');\ncy.get('[type=submit]').click();",
+              "err": {},
+              "uuid": "b6540fcd-75fd-468a-bc63-c9fb5ba41d3b",
+              "parentUUID": "cf8b7651-5ad7-4575-b333-50d99c1ed02a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Então deverá retornar os artigos referente à categgoria pesquisada",
+              "fullTitle": "Realizar pesquisa de artigos Então deverá retornar os artigos referente à categgoria pesquisada",
+              "timedOut": null,
+              "duration": 17,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.url().should('contains', 'agilidade');",
+              "err": {},
+              "uuid": "0cfc6eed-c09f-42cb-b391-db8dcfd11ade",
+              "parentUUID": "cf8b7651-5ad7-4575-b333-50d99c1ed02a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f855bbd6-0a40-4be9-b731-ce320a62ab55",
+            "b6540fcd-75fd-468a-bc63-c9fb5ba41d3b",
+            "0cfc6eed-c09f-42cb-b391-db8dcfd11ade"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3510,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
